@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+       <!--Configuração inicial do site definindo a linguagem e o titulo-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <!--Titulo-->
+    <title>Caixa interativa</title>
+       <!--Inicio do design-->
+    <style>
+        /* Fonte e o fundo */
+        div#area {
+         margin-top: 20%;
+         margin-left: 45%;
+         font: normal 200pt;
+         background: rgb(192, 10, 192);
+         color: whitesmoke;
+         width: 200px;
+         height: 200px;
+         line-height: 200px;
+         text-align: center;
+        }
+    </style>     
+</head>
+<body>
+     <div id="area">
+          Bem vindo!
+     </div>
+      <script>
+        // Inicio da detecção do mouse
+          var a = window.document.getElementById('area')
+          a.addEventListener('click', clicar)
+          a.addEventListener('mouseenter', entrar)
+          a.addEventListener('mouseout', saiu)
+          a.addEventListener('dblclick', contarClicks)
+          a.addEventListener('triple-click', click2)
+        // Inicio da função
+            function clicar() {
+             a.innerText = 'Você Clicou!'
+             a.style.background = 'black'                       
+         }
+            function entrar() {
+             a.innerText = 'Você Entrou!'
+             a.style.background = 'darkblue'
+         }
+            function saiu() {
+             a.innerText = 'Você Saiu!'
+             a.style.background = 'darkred'
+         }
+            function contarClicks() {
+             a.innerText = 'Você clicou 2 vezes'
+             a.style.background = 'darkpink'
+         }
+            function click2() {
+             a.innerText = 'Você clicou mais vezes!'
+             a.style.background = 'pink'
+         }
+         // Fim do script
+      </script>
+</body>
+</html>
